@@ -2,16 +2,19 @@
 
 int main(void)
 {
-	int a;
-	int b=0;
-	for (a = 0; a <= 100; a=a+1)
+	int input;
+	while (1)
 	{
-		if (a % 3 == 0)
+		printf("막대의 높이 입력 (종료 -1) : ");
+		scanf_s("%d", &input);
+		if (input == -1)
+			break;
+		while (input > 0)
 		{
-			printf("%d\n", a);
-			b = b + a;
+			printf("*\n");
+			input--;
 		}
+
 	}
-	printf("%d", b);
 	return 0;
 }
